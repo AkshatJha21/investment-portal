@@ -9,9 +9,14 @@ import {
     TableRow,
   } from "../ui/table"
 import { Check, Hourglass, X } from "lucide-react"
+import { useState } from "react"
+import NewProposal from "./modal/NewProposal"
 
 
 const Dashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleModalOpen = () => setIsModalOpen(true);
+    const handleModalClose = () => setIsModalOpen(false);
   return (
     <div className='mx-6'>
         <Navbar />
@@ -29,7 +34,7 @@ const Dashboard = () => {
                         <p className="text-lg font-medium">B</p>
                     </div>
                 </div>
-                <Button>
+                <Button onClick={handleModalOpen}>
                     New Proposal
                 </Button>
             </div>
@@ -107,8 +112,8 @@ const Dashboard = () => {
                     </TableRow>
                 </TableBody>
             </Table>
-
         </div>
+        <NewProposal isOpen={isModalOpen} onClose={handleModalClose} />
     </div>
   )
 }
