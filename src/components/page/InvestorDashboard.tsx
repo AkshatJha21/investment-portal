@@ -9,7 +9,7 @@ import {
     TableRow,
   } from "../ui/table"
 import { Check, Hourglass, X } from "lucide-react"
-  
+
 
 const Dashboard = () => {
   return (
@@ -34,6 +34,7 @@ const Dashboard = () => {
                 </Button>
             </div>
             <hr className="my-4"/>
+            <h1 className="text-xl font-semibold py-4">Past Submitted Proposals</h1>
             <Table>
                 <TableHeader>
                     <TableRow>
