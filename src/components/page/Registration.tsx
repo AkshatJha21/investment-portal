@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 import Navbar from './AuthNavbar';
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({
-      investorName: '',
-      investorId: '',
-      territory: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    });
+    // const [formData, setFormData] = useState({
+    //   investorName: '',
+    //   investorId: '',
+    //   territory: '',
+    //   email: '',
+    //   password: '',
+    //   confirmPassword: ''
+    // });
   
     return (
         <div>
