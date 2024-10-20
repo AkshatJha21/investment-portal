@@ -71,10 +71,10 @@ const ProposalDetails = ({ isOpen, onClose }: ModalProps) => {
                     </div>
                 </div>
                 <div className="flex w-full pt-4 space-x-2">
-                    <Button className="w-1/2 bg-green-600">
+                    <Button className="w-1/2 bg-green-600" onClick={onClose}>
                         Accept
                     </Button>
-                    <Button className="w-1/2 bg-rose-600">
+                    <Button className="w-1/2 bg-rose-600" onClick={onClose}>
                         Reject
                     </Button>
                 </div>

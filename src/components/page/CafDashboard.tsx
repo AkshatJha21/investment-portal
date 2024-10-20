@@ -9,8 +9,13 @@ import {
     TableRow,
   } from "../ui/table"
 import { Check, Hourglass, X } from "lucide-react"
+import { useState } from "react";
+import ProposalDetails from "./modal/ProposalDetails";
 
 const CafDashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleModalOpen = () => setIsModalOpen(true);
+    const handleModalClose = () => setIsModalOpen(false);
   return (
     <div className='mx-6'>
         <Navbar />
@@ -41,7 +46,7 @@ const CafDashboard = () => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    <TableRow>
+                    <TableRow className="cursor-pointer" onClick={handleModalOpen}>
                         <TableCell className="text-center">10</TableCell>
                         <TableCell className="text-center">95000</TableCell>
                         <TableCell className="text-center">Health</TableCell>
@@ -55,7 +60,7 @@ const CafDashboard = () => {
                         <TableCell className="text-center">2024-10-20</TableCell>
                         <TableCell className="text-center text-green-600">Verified</TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow className="cursor-pointer" onClick={handleModalOpen}>
                         <TableCell className="text-center">12</TableCell>
                         <TableCell className="text-center">45000</TableCell>
                         <TableCell className="text-center">Education</TableCell>
@@ -69,7 +74,7 @@ const CafDashboard = () => {
                         <TableCell className="text-center">2024-10-20</TableCell>
                         <TableCell className="text-center text-yellow-500">Pending</TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow className="cursor-pointer" onClick={handleModalOpen}>
                         <TableCell className="text-center">23</TableCell>
                         <TableCell className="text-center">30000</TableCell>
                         <TableCell className="text-center">Health</TableCell>
@@ -83,7 +88,7 @@ const CafDashboard = () => {
                         <TableCell className="text-center">2024-10-20</TableCell>
                         <TableCell className="text-center text-yellow-500">Pending</TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow className="cursor-pointer" onClick={handleModalOpen}>
                         <TableCell className="text-center">9</TableCell>
                         <TableCell className="text-center">10000</TableCell>
                         <TableCell className="text-center">Business</TableCell>
@@ -99,8 +104,8 @@ const CafDashboard = () => {
                     </TableRow>
                 </TableBody>
             </Table>
-
         </div>
+        <ProposalDetails isOpen={isModalOpen} onClose={handleModalClose}/>
     </div>
   )
 }
