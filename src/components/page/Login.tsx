@@ -6,10 +6,11 @@ import Navbar from './AuthNavbar';
 
 interface LoginProps {
     title: string;
+    next: string;
     route: string;
 }
 
-const Login = ({ title, route }: LoginProps) => {
+const Login = ({ title, route, next }: LoginProps) => {
   return (
     <div>
         <Navbar />
@@ -37,7 +38,7 @@ const Login = ({ title, route }: LoginProps) => {
                         className="w-full px-4 py-2 border rounded-lg"
                     />
                     </div>
-                    <Link to={`${route}`}>
+                    <Link to={`${next}`}>
                         <Button className="w-full text-white mt-4 py-2 rounded-lg">
                             Sign In
                         </Button>
@@ -47,7 +48,7 @@ const Login = ({ title, route }: LoginProps) => {
                     <p>
                         Don't have an account? &nbsp;
                     </p>
-                    <Link to={'/signup'}>
+                    <Link to={`${route}`}>
                         <p className="text-blue-600 hover:text-indigo-800">
                         Sign Up
                         </p>
