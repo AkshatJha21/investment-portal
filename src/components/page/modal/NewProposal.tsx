@@ -37,7 +37,7 @@ const NewProposal = ({ isOpen, onClose }: ModalProps) => {
                             <option value="Automotive">Automotive</option>
                         </select>
                     </div>
-                    <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white mt-4 py-2 rounded-lg">
+                    <Button className="w-full  text-white mt-4 py-2 rounded-lg">
                         CREATE
                     </Button>
                 </form>

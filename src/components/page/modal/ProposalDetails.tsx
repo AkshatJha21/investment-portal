@@ -47,7 +47,7 @@ const ProposalDetails = ({ isOpen, onClose }: ModalProps) => {
                         <p className="text-sm text-slate-500">Poverty Elimination</p>
                         <p className="text-lg font-medium">Yes</p>
                     </div>
-                    <div className="text-center bg-green-600 py-2 text-white rounded-md">
+                    <div className="text-center border border-dashed rounded-md py-2 border-green-600 text-green-600 font-light text-sm">
                         Verified by SUB_ADMIN
                     </div>
                 </div>

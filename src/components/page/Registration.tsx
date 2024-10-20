@@ -72,7 +72,7 @@ const RegistrationForm = () => {
                         />
                         </div>
                         <Link to={'/'}>
-                            <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white mt-4 py-2 rounded-lg">
+                            <Button className="w-full text-white mt-4 py-2 rounded-lg">
                             Sign Up
                             </Button>
                         </Link>
@@ -82,7 +82,7 @@ const RegistrationForm = () => {
                             Already have an account? &nbsp;
                         </p>
                         <Link to={'/signin-investor'}>
-                            <p className="text-indigo-600 hover:text-indigo-800">
+                            <p className="text-blue-600 hover:text-indigo-800">
                             Sign In
                             </p>
                         </Link>
